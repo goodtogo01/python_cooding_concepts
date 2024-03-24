@@ -27,10 +27,32 @@ print("List after adding element at index 2 : ", sample_list)
 
 sample_list.append(element)
 print("List after adding element at last : ", sample_list)
-
+print()
 # TODO Exercise 3: Slice list into 3 equal chunks and reverse each chunk
 sample_list = [11, 45, 8, 23, 14, 12, 78, 45, 89]
-# print("Original list : ", sample_list)
+print("Original list : ", sample_list)
+length = len(sample_list)
+chunk_size = int(length/3)
+start = 0
+end = chunk_size
+
+# run loop 3 times
+for i in range(3):
+    # get index
+    index = sample_list[0::3] # slice(start, end)
+
+    # get chanks
+    list_chunk = sample_list[index]
+    print("chunk ", i, list_chunk)
+
+    # reverse chunk
+    print("After reversring it : ", list(reversed(list_chunk)))
+
+    start = end
+    end += chunk_size
+
+
+
 # Exercise 4: Count the occurrence of each element from a list
 sample_list = [11, 45, 8, 11, 23, 45, 23, 45, 89]
 occurances = collections.Counter(sample_list)
