@@ -119,10 +119,30 @@ values = [1, 2, 3]
 # df = dict(zip(keys, values))
 # print(df)
 
-# merge two dic
-dic1 = {'One': 1, 'Two': 2, 'Three': 3}
-dic2 = {'Three': 3, 'four': 4, 'Five': 5}
-dic3 = {**dic1, **dic2}
-print("Merged dictionaries with dict view: ", dict(dic3, indent=3))
-print("\nMerged dictionaries with json view : ", json.dumps(dic3, indent=3))
+# # merge two dic
+# dic1 = {'One': 1, 'Two': 2, 'Three': 3}
+# dic2 = {'Three': 3, 'four': 4, 'Five': 5}
+# dic3 = {**dic1, **dic2}
+# print("Merged dictionaries with dict view: ", dict(dic3, indent=3))
+# print("\nMerged dictionaries with json view : ", json.dumps(dic3, indent=3))
 
+sample_dict = {
+    "name": ['kamal', 'jamal', 'malamal'],
+    "id": [10, 11, 12],
+    "age": [25, 70, 89],
+    "salary": [12344, 5475, 8000, ],
+    "city": ['NY', 'PA', 'NJ']
+}
+
+# Keys to extract
+keys = ['id', 'city']
+# print(keys)
+# print(dict(sample_dict))
+# new_dict = {k: sample_dict[k] for k in keys}
+# print(new_dict)
+
+res = dict()
+for k in keys:
+        res = ({k: sample_dict[k]})
+        print(res)
+# print(res)
