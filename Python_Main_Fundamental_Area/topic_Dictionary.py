@@ -11,19 +11,19 @@
 
 
 import json
-# Exercise 1: Convert two lists into a dictionary
+# TODO Exercise 1: Convert two lists into a dictionary
 list1 = ['One', 'Two', 'Three']
 list2 = [1,2,3]
 converted_dict = dict(zip(list1, list2))
 print("Convert two lists into a dictionary : ", converted_dict)
-# Exercise 2: Merge two Python dictionaries into one
+# TODO Exercise 2: Merge two Python dictionaries into one
 dic1 = {'One': 1, 'Two': 2, 'Three': 3}
 dic2 = {'Three': 3, 'four': 4, 'Five': 5}
 dic3 = {**dic1, **dic2}
 print("\nMerged dictionaries with dict view: ", dict(dic3, indent=3))
 print("\nMerged dictionaries with json view : ", json.dumps(dic3, indent=3))
 
-# Exercise 3: Print the value of key ‘history’ from the below dict
+# TODO Exercise 3: Print the value of key ‘history’ from the below dict
 sampleDict = {
     "class": {
         "student": {
@@ -38,13 +38,13 @@ sampleDict = {
 value_history = sampleDict['class']['student']['marks']['history']
 print("\nPrint the value of key ‘history’ from the below dict : ",value_history)
 
-# Exercise 4: Initialize dictionary with default values
+# TODO Exercise 4: Initialize dictionary with default values
 employees = ['Kelly', 'Emma']
 defaults = {"designation": 'Developer', "salary": 8000}
 results = dict.fromkeys(employees, defaults)
 print("\nInitialize dictionary with default values : ", json.dumps(results, indent=4))
 
-# Exercise 5: Create a dictionary by extracting the keys from a given dictionary
+# TODO  Exercise 5: Create a dictionary by extracting the keys from a given dictionary
 sample_dict = {
     "name": "Kelly",
     "age": 25,
@@ -63,7 +63,7 @@ print("\nMethod 02 : using Loop comprehension")
 res2 = {k: sample_dict[k] for k in keys}
 print(res2)
 
-# Exercise 6: Delete a list of keys from a dictionary
+# TODO Exercise 6: Delete a list of keys from a dictionary
 sample_dict = {
   "name": "Kelly",
   "age":25,
@@ -77,7 +77,7 @@ for k in forDel:
 print(f"After deleting of {forDel} : ", sample_dict)
 print()
 
-# Exercise 7: Check if a value exists in a dictionary
+# TODO Exercise 7: Check if a value exists in a dictionary
 exist_value = {
     "name": "Kelly",
     "age": 25,
@@ -88,7 +88,7 @@ if 25 in exist_value.values():
     print("Value of 25 is exist")
 else:
     print("Value doesnt exist")
-# Exercise 8: Rename key of a dictionary
+# TODO Exercise 8: Rename key of a dictionary
 print()
 rename_key = {
     "name": "Kelly",
@@ -101,7 +101,7 @@ rename_key['location']= rename_key.pop('city')
 print("With new key after rename : ", rename_key)
 print()
 
-# Exercise 9: Get the key of a minimum value from the following dictionary
+# TODO Exercise 9: Get the key of a minimum value from the following dictionary
 minimum_key = {
   'Physics': 82,
   'Math': 65,
@@ -111,7 +111,7 @@ min_value = min(minimum_key)
 print("The key that belong minimum value : [", min_value, "] "
     "and holding value is : [", min(minimum_key.values()),"]")
 print()
-# Exercise 10: Change value of a key in a nested dictionary
+# TODO Exercise 10: Change value of a key in a nested dictionary
 sample_dict = {
     'emp1': {'name': 'Jhon', 'salary': 7500},
     'emp2': {'name': 'Emma', 'salary': 8000},
