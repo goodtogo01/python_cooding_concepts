@@ -1,7 +1,14 @@
 import math
+import collections
+
+# todo find only repeated item from the list
+print('Find only repeated item from the list')
+flc =[5, 10, 15, 20, 25, 50, 20, 20]
+v = 20
+print(f"Found {v} in the list of : ",flc.count(20)," Times")
 
 # todo Exercise 1: Reverse a list in Python
-print('Exercise 1: Reverse a list in Python')
+print('\nExercise 1: Reverse a list in Python')
 list1 = [100, 200, 300, 400, 500]
 print('Original List: ', list1)
 
@@ -12,6 +19,7 @@ print("Reversed List: ", list1)
 
 # todo Exercise 2: Concatenate two lists index-wise
 print('\nExercise 2: Concatenate two lists index-wise')
+# single iteration i+j i+j i+j i+j
 list1 = ["M", "na", "i", "Ke"]
 list2 = ["y", "me", "s", "lly"]
 l3 = [i + j for i, j in zip(list1, list2)]
@@ -29,6 +37,7 @@ print("Square of list :", sqrList)
 
 # todo Exercise 4: Concatenate two lists in the following order
 print('\nExercise 4: Concatenate two lists in the following order')
+# multi iteration i[0] j[0], i[0] j[1], i[1] j[0], i[1] j[1]
 l1 = ["Hello ", "take "]
 l2 = ["Dear", "Sir"]
 # Expected out put: ['Hello Dear', 'Hello Sir', 'take Dear', 'take Sir']
@@ -78,5 +87,18 @@ subList = [11,12,13]
 orgList[2][2][2].append(subList)
 print("After adding sublist : ",orgList)
 
-# Exercise 9: Replace list’s item with new value if found
-# Exercise 10: Remove all occurrences of a specific item from a list.
+# todo Exercise 9: Replace list’s item with new value if found
+print('\nExercise 9: Replace list’s item with new value if found')
+original_list=[5, 10, 15, 20, 25, 50, 20]
+print("original list : ", original_list)
+vl = original_list.index(20)
+original_list[vl]=11
+print("After removing 20 : ", original_list)
+# todo Exercise 10: Remove all occurrences of a specific item from a list.
+print('\nExercise 10: Remove all occurrences of a specific item from a list.')
+original_list=[5, 10, 15, 20, 25, 50, 20]
+print("original list : ", original_list)
+while 20 in original_list:
+    original_list.remove(20)
+print("After removing multiple ocurance : ",original_list)
+
