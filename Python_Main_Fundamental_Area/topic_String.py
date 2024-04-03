@@ -51,15 +51,16 @@ print(f'first, middle, and last characters of given string as {s} :', final_str(
 # todo Exercise 4: Arrange string characters such that lowercase letters should come first
 print('\nExercise 4: Arrange string characters such that lowercase letters should come first')
 s = 'abcdABCD'
-l=[]
-u=[]
+l = []
+u = []
 for i in s:
     if i.islower():
-     l.append(i)
+        l.append(i)
     else:
-       u.append(i)
-res = " ".join(l+u)
-print(f"Lower is come first from {s} : ",res)
+        u.append(i)
+res = " ".join(l + u)
+print(f"Lower is come first from {s} : ", res)
+
 
 def lower_and_upper_check(m):  # only lower or uppder case
     lo = []
@@ -71,26 +72,25 @@ def lower_and_upper_check(m):  # only lower or uppder case
             up.append(i)
     return lo
 
+
 # TODO Exercise 5: Count all letters, , and special symbols from a given string
 print('\nExercise 5: Count all letters, , and special symbols from a given string')
 s = "Welcom 123@#$%> '' "
 f = collections.Counter(s)
-print("Here is total elements of counts : ",  json.dumps(f, indent=2))
+print("Here is total elements of counts : ", json.dumps(f, indent=2))
 print('\nMethod 2: ')
 
-alpha =0
+alpha = 0
 digit = 0
 symbol = 0
 for i in s:
     if i.isalpha():
-        alpha = alpha+1
+        alpha = alpha + 1
     elif i.isdigit():
         digit = digit + 1
     else:
-        symbol = symbol+1
-print("Alpha : ",alpha, "\nDigits : ",digit,"\nSymble : ",symbol)
-
-
+        symbol = symbol + 1
+print("Alpha : ", alpha, "\nDigits : ", digit, "\nSymble : ", symbol)
 
 # todo Exercise 6: Create a mixed String using the following rules
 print('\nExercise 6: Create a mixed String using the following rules')
@@ -99,18 +99,20 @@ b = 'XYZ'
 s3 = " "
 
 for i in range(len(a)):
-    s3 = s3 +a[i]
-    s3 = s3+b[-1-i]
-print("Method 1 : ",s3)
+    s3 = s3 + a[i]
+    s3 = s3 + b[-1 - i]
+print("Method 1 : ", s3)
 
-def mixchars(a,b):
+
+def mixchars(a, b):
     s = " "
     for i in range(len(a)):
-        s = s+a[i]
-        s = s+b[-1-i]
+        s = s + a[i]
+        s = s + b[-1 - i]
     return s
 
-print('Method 2: ',mixchars(a, b))
+
+print('Method 2: ', mixchars(a, b))
 
 # Exercise 7: String characters balance Test
 
