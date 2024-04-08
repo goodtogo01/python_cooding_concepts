@@ -1,4 +1,4 @@
-"""
+des = """
 Lists are used to store multiple items in a single variable.
 
 List Items
@@ -18,6 +18,7 @@ Allow Duplicates
 Since lists are indexed, lists can have items with the same value:
 
 """
+print(des)
 
 
 import math
